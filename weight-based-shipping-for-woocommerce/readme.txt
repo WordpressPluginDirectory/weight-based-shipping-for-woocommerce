@@ -5,7 +5,7 @@ Requires PHP: 7.2
 Requires at least: 4.6
 Tested up to: 6.4
 WC requires at least: 5.0
-WC tested up to: 8.5
+WC tested up to: 8.7
 Stable tag: trunk
 
 
@@ -55,6 +55,10 @@ See <a href="https://wordpress.org/plugins/weight-based-shipping-for-woocommerce
 
 
 == Changelog ==
+
+= 5.7.2 =
+* Tested with WooCommerce 8.6, 8.7.
+* WBS6 preview improvements (Plus version only).
 
 = 5.7.1 =
 * Tested with WooCommerce 8.5.

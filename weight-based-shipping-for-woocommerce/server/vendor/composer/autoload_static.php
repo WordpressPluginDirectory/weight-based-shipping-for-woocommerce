@@ -4,7 +4,7 @@
 
 namespace WbsVendors\Composer\Autoload;
 
-class ComposerStaticInit385a92082f96de7f3848b685a3e10a54
+class ComposerStaticInitdb8f510fed05587be30443cce6b43174
 {
     public static $files = array (
         'b411d774a68934fe83360f73e6fe640f' => __DIR__ . '/..' . '/dangoodman/composer-capsule-runtime/autoload.php',
@@ -90,9 +90,9 @@ class ComposerStaticInit385a92082f96de7f3848b685a3e10a54
     public static function getInitializer(\WbsVendors\Composer\Autoload\ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = \WbsVendors\Composer\Autoload\ComposerStaticInit385a92082f96de7f3848b685a3e10a54::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = \WbsVendors\Composer\Autoload\ComposerStaticInit385a92082f96de7f3848b685a3e10a54::$prefixDirsPsr4;
-            $loader->classMap = \WbsVendors\Composer\Autoload\ComposerStaticInit385a92082f96de7f3848b685a3e10a54::$classMap;
+            $loader->prefixLengthsPsr4 = \WbsVendors\Composer\Autoload\ComposerStaticInitdb8f510fed05587be30443cce6b43174::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = \WbsVendors\Composer\Autoload\ComposerStaticInitdb8f510fed05587be30443cce6b43174::$prefixDirsPsr4;
+            $loader->classMap = \WbsVendors\Composer\Autoload\ComposerStaticInitdb8f510fed05587be30443cce6b43174::$classMap;
 
         }, null, \WbsVendors\Composer\Autoload\ClassLoader::class);
     }
