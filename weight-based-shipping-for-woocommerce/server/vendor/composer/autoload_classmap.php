@@ -11,6 +11,4 @@ return array(
     'WbsVendors\\Dgm\\ClassNameAware\\ClassNameAware' => $vendorDir . '/dangoodman/class-name-aware/ClassNameAware.php',
     'WbsVendors\\Dgm\\SimpleProperties\\SimpleProperties' => $vendorDir . '/dangoodman/simple-properties/SimpleProperties.php',
     'WbsVendors\\Dgm\\WcTools\\WcTools' => $vendorDir . '/dangoodman/wc-tools/WcTools.php',
-    'WbsVendors_DgmWpDismissibleNotices' => $vendorDir . '/dangoodman/wp-plugin-bootstrap-guard/DgmWpDismissibleNotices.php',
-    'WbsVendors_DgmWpPluginBootstrapGuard' => $vendorDir . '/dangoodman/wp-plugin-bootstrap-guard/DgmWpPluginBootstrapGuard.php',
 );

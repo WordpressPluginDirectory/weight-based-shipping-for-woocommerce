@@ -3,10 +3,10 @@ jQuery(function ($) {
 
         e.preventDefault();
 
-        var noticeId = $(this).parent().attr('data-dismissible');
+        const noticeId = $(this).parent().attr('data-dismissible');
 
         //noinspection JSUnresolvedVariable
-        var data = {
+        const data = {
             'action': 'dgm_dismiss_admin_notice',
             'id': noticeId,
             'nonce': dgm_dismissible_notice.nonce

@@ -1,25 +1,25 @@
 <?php
+namespace WbsVendors\Dgm\WpPluginBootstrapGuard;
 
-class WbsVendors_DgmWpDismissibleNotices
+
+class Notices
 {
-    public static function className()
-    {
-        /** @noinspection ClassConstantCanBeUsedInspection <class>::class supported since PHP 5.5 */
-        return get_called_class();
-    }
-
     public static function init()
     {
         add_action('admin_enqueue_scripts', array(__CLASS__, '_enqueueScripts'));
         add_action('wp_ajax_dgm_dismiss_admin_notice', array(__CLASS__, '_dismissNotice'));
     }
 
-    public static function isNoticeDismissed($noticeId)
+    /**
+     * @param string $noticeId
+     * @return bool
+     */
+    public static function isDismissed($noticeId)
     {
         return (bool)get_site_transient($noticeId);
     }
 
-    public static function _enqueueScripts()
+    static function _enqueueScripts()
     {
         wp_enqueue_script(
             'dgm-dismissible-notices',
@@ -38,12 +38,11 @@ class WbsVendors_DgmWpDismissibleNotices
         );
     }
 
-    public static function _dismissNotice()
+    static function _dismissNotice()
     {
         $id = sanitize_text_field($_POST['id']);
         check_ajax_referer('dgm-dismissible-notice', 'nonce');
         set_site_transient($id, true);
-        /** @noinspection ForgottenDebugOutputInspection */
         wp_die();
     }
 }
