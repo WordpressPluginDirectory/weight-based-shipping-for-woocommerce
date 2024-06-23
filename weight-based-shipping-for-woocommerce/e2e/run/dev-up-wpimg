@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail; here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd); cd "$here"
+
+container=wbs-e2e-wp
+
+docker rm -fv "$container" 2>/dev/null >&2 || true
+
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' 0
+(
+    repo="$here"/../..
+    cd "$tmp"
+    "$repo"/.release/build "${1:-HEAD}" | tar xf -
+)
+
+img="$(wpimg php=latest wp=latest plugin=woocommerce=latest autologin --no-push)"
+
+wait
+
+docker run \
+    --detach \
+    --name "$container" \
+    -p 8888:80 \
+    "$img" > /dev/null
+
+
+docker cp "$tmp"/"$(ls "$tmp")" "$container":/var/www/html/wp-content/plugins
+docker exec "$container" chown -R www-data:www-data /var/www/html/wp-content/plugins
+
+while ! curl localhost:8888 >/dev/null 2>&1; do sleep 1; done
+docker exec "$container" sh /usr/local/bin/wp plugin activate --all

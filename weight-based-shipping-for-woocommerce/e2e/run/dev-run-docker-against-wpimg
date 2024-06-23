@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail; here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd); cd "$here"/..
+
+container=wbs-e2e-wp
+
+iidfile="$(mktemp)"
+trap 'rm "$iidfile"' 0
+docker build --iidfile="$iidfile" .
+img="$(cat "$iidfile")"
+
+docker run \
+    --rm \
+    -e wp_host=host.docker.internal:8888 \
+    -e wp_container="$container" \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v "$PWD"/video:/tmp/video/ \
+    "$img"
