@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -Eeuo pipefail; here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd); cd "$here"/..
-
-PWGO_VER=$(grep -oE "playwright-go v\S+" go.mod | sed 's/playwright-go //g')
-go run github.com/playwright-community/playwright-go/cmd/playwright@"${PWGO_VER}" "$@"
