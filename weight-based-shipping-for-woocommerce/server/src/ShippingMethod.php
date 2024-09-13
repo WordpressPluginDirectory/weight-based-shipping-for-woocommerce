@@ -162,6 +162,10 @@ class ShippingMethod extends WC_Shipping_Method
             });
         }
 
+        add_action('admin_footer', static function() {
+            wp_dequeue_script('wc-ppcp-admin-notice');
+        }, PHP_INT_MAX);
+
         if (defined('WBS_DEV')) {
             wp_register_script('wbs-polyfills', $paths->getAssetUrl('polyfills.js'));
             wp_register_script('wbs-vendor', $paths->getAssetUrl('vendor.js'), ['wbs-polyfills']);
@@ -184,8 +188,8 @@ class ShippingMethod extends WC_Shipping_Method
             'weightUnit' => get_option('woocommerce_weight_unit'),
 
             'currency' => [
-                'symbol'    => html_entity_decode(get_woocommerce_currency_symbol()),
-                'right'     => $currencyPlacement[0] === 'right',
+                'symbol' => html_entity_decode(get_woocommerce_currency_symbol()),
+                'right' => $currencyPlacement[0] === 'right',
                 'withSpace' => @$currencyPlacement[1] === 'space',
             ],
 
@@ -200,8 +204,8 @@ class ShippingMethod extends WC_Shipping_Method
             'wcpre441' => !Plugin::wc441plus(),
 
             'globalMethods' => ($this->instance_id || !class_exists(\Gzp\WbsNg\Plugin::class)) ? null : [
-                'state'            => get_option('wbs_global_methods') ?: 'only-wbs',
-                'endpoint'         => Api::$globalSwitch->url(),
+                'state' => get_option('wbs_global_methods') ?: 'only-wbs',
+                'endpoint' => Api::$globalSwitch->url(),
                 'wbsngRedirectUrl' => Plugin::shippingUrl(\Gzp\WbsNg\Plugin::ID),
             ],
         ]);
@@ -230,7 +234,7 @@ class ShippingMethod extends WC_Shipping_Method
             $country = html_entity_decode($country);
 
             $locations[] = [
-                'id'   => self::getStateCode($cc, '*'),
+                'id' => self::getStateCode($cc, '*'),
                 'name' => $country,
             ];
 
@@ -241,7 +245,7 @@ class ShippingMethod extends WC_Shipping_Method
                     $state = html_entity_decode($state);
 
                     $locations[] = [
-                        'id'   => self::getStateCode($cc, $sc),
+                        'id' => self::getStateCode($cc, $sc),
                         'name' => "{$country} — {$state}",
                     ];
                 }
@@ -256,7 +260,7 @@ class ShippingMethod extends WC_Shipping_Method
         return Arrays::map(WC()->shipping()->get_shipping_classes(), static function(WP_Term $term) {
             /** @noinspection PhpCastIsUnnecessaryInspection  $term field types aren't guaranteed */
             return [
-                'id'   => (string)$term->term_id,
+                'id' => (string)$term->term_id,
                 'name' => (string)$term->name,
                 'slug' => (string)$term->slug,
             ];
