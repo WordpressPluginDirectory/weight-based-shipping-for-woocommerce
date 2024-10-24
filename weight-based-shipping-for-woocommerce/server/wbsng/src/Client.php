@@ -95,6 +95,7 @@ class Client
                     'symbol' => html_entity_decode(get_woocommerce_currency_symbol()),
                     'right' => $currencyPlacement[0] === 'right',
                     'withSpace' => isset($currencyPlacement[1]) && $currencyPlacement[1] === 'space',
+                    'decimals' => wc_get_price_decimals(),
                 ],
                 'volume' => [
                     'symbol' => get_option('woocommerce_dimension_unit').'³',

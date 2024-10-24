@@ -55,6 +55,10 @@ See <a href="https://wordpress.org/plugins/weight-based-shipping-for-woocommerce
 
 == Changelog ==
 
+= 5.11.0 =
+* Fix order subtotal might be incorrectly detected for block-based Cart.
+* WBS6 preview: UI tweaks.
+
 = 5.10.0 =
 * Fix WooCommerce PayPal Payment admin messages cause WBS rules to appear empty.
 * Tested with WooCommerce 9.3.

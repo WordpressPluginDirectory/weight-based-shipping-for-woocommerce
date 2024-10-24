@@ -1,5 +1,4 @@
 <?php
-
 namespace Gzp\WbsNg;
 
 use Gzp\WbsNg\Mapping\Context;
