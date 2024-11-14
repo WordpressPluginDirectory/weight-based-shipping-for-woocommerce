@@ -36,8 +36,16 @@ class Plugin
         Api::init();
 
         add_filter('woocommerce_shipping_methods', static function($shippingMethods) {
-            $shippingMethods[self::ID] = ShippingMethod::class;
-            return $shippingMethods;
+
+            $idx = array_search('wbs', array_keys($shippingMethods));
+            if ($idx === false) {
+                $idx = count($shippingMethods);
+            }
+
+            return
+                array_slice($shippingMethods, 0, $idx, true) +
+                [self::ID => ShippingMethod::class] +
+                array_slice($shippingMethods, $idx, null, true);
         });
 
         // Show the solution breakdown on the frontend.

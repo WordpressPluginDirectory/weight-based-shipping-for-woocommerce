@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 /**
- * Plugin Name: Weight Based Shipping 6 Preview
+ * Plugin Name: Weight Based Shipping 6 (isolated)
  */
 
 require_once(__DIR__.'/vendor/autoload.php');

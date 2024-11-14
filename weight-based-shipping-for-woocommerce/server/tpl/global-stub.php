@@ -31,11 +31,11 @@
 
 <br>
 
-<a class="button wbs-global-method-button" href="<?= esc_html(admin_url('admin.php?page=wc-settings&tab=shipping')) ?>">
+<a class="button-primary wbs-global-method-button" href="<?= esc_html(admin_url('admin.php?page=wc-settings&tab=shipping')) ?>">
     Go to shipping zones
 </a>
 &nbsp;&nbsp;&nbsp;
-<a class="button-primary wbs-global-method-button" id="wbs_proceed_with_global" href="#">
+<a class="button wbs-global-method-button" id="wbs_proceed_with_global" href="#">
     Set up global shipping rules
 </a>
 

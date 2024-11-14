@@ -28,8 +28,10 @@ class Shipping
             return $x->active();
         });
 
+        $rawSolutions = self::solve($items, $dest, $methods, $document->settings->disableSplitShipping ? 1 : 3);
+
         $solutions = [];
-        foreach (self::solve($items, $dest, $methods, $document->settings->disableSplitShipping ? 1 : 3) as $shipments) {
+        foreach ($rawSolutions as $shipments) {
             $solutions[] = new Solution(new Set($shipments));
         }
 
@@ -48,6 +50,12 @@ class Shipping
 
         return $solutions;
     }
+
+    /**
+     * @var ?callable(Method $method, int $id): int
+     * @noinspection PhpPropertyOnlyWrittenInspection written in the test
+     */
+    private static $getMethodId;
 
     /**
      * Returns M!/(M-l)! solutions at max; l = min(M, L); M – number of methods, L – $maxMethodsInSolution.
@@ -72,7 +80,12 @@ class Shipping
         $rawSolutions = [];
         foreach ($methods as $k => $method) {
 
-            $shipment = $method->apply($bundle, $dest);
+            $id = $k;
+            if (isset(self::$getMethodId)) {
+                $id = (self::$getMethodId)($method, $id);
+            }
+
+            $shipment = $method->apply($bundle, $dest, $id);
             if (!isset($shipment)) {
                 continue;
             }

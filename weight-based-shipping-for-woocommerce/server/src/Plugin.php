@@ -36,7 +36,7 @@ class Plugin
     {
         $query = [
             "page" => "wc-settings",
-            "tab"  => "shipping",
+            "tab" => "shipping",
         ];
 
         if (isset($section)) {

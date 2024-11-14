@@ -47,15 +47,24 @@ class ShippingMethod extends WC_Shipping_Method
             }
         }
 
-        $this->title = $this->method_title = 'Weight Based Shipping 6 Preview';
+        $this->title = $this->method_title = 'Weight Based Shipping';
 
-        try {
-            // Displaying the list of internal shipping methods via $this->title might be looking better
-            // in the list of a zone's shipping methods, but it breaks the zones page since it escapes html.
-            $this->method_description = join('', map($this->config()->methods, function(Method $m) {
-                return '<div '.($m->active() ? '' : 'style="color: #a7aaad"').' >'.esc_html($m->name).'</div>';
-            }));
-        } catch (ConfigError $e) {
+        if ($instanceId) {
+            try {
+                // Displaying the list of internal shipping methods via $this->title might be looking better
+                // in the list of a zone's shipping methods, but it breaks the zones page since it escapes html.
+                $this->method_description = join('', map($this->config()->methods, function(Method $m) {
+                    return '<div '.($m->active() ? '' : 'style="color: #a7aaad"').' >'.esc_html($m->name).'</div>';
+                }));
+            }
+            catch (ConfigError $e) {
+            }
+        }
+
+        // When instance_id is empty, this text is shown to a user choosing a new shipping method from the list.
+        // Otherwise, it's shown next to an existing shipping method instance.
+        if (!$this->method_description) {
+            $this->method_description = 'Lets you define flat, progressive, and free shipping options based on cart weight, price, and contents.';
         }
     }
 
@@ -77,6 +86,30 @@ class ShippingMethod extends WC_Shipping_Method
         if ($updated) {
             WcTools::purgeShippingCache();
         }
+    }
+
+    /**
+     * @throws ConfigError
+     * @noinspection PhpDocRedundantThrowsInspection
+     */
+    public function config(array $data = null): Document
+    {
+        $data = $data ?? $this->configData();
+        if (!isset($data)) {
+            return new Document();
+        }
+
+        $ctx = Context::of(
+            $data,
+            function(Context $ctx, \Throwable $e) {
+                if ($e instanceof \Exception) {
+                    $e = new ConfigError("config loading error at {$ctx->origin($e)->path()}: {$e->getMessage()}", 0, $e);
+                }
+                return $e;
+            }
+        );
+
+        return $ctx->map([Document::class, 'unserialize']);
     }
 
     public function is_available($package): bool
@@ -157,29 +190,4 @@ class ShippingMethod extends WC_Shipping_Method
      * @var string
      */
     private $optionName;
-
-
-    /**
-     * @throws ConfigError
-     * @noinspection PhpDocRedundantThrowsInspection
-     */
-    private function config(array $data = null): Document
-    {
-        $data = $data ?? $this->configData();
-        if (!isset($data)) {
-            return new Document();
-        }
-
-        $ctx = Context::of(
-            $data,
-            function(Context $ctx, \Throwable $e) {
-                if ($e instanceof \Exception) {
-                    $e = new ConfigError("config loading error at {$ctx->origin($e)->path()}: {$e->getMessage()}", 0, $e);
-                }
-                return $e;
-            }
-        );
-
-        return $ctx->map([Document::class, 'unserialize']);
-    }
 }

@@ -77,9 +77,11 @@ class Client
             ];
         }
 
+        $config = $this->method->configData();
+
         wp_localize_script($jsid, 'gzp_wbsng_js_data', [
 
-            'config' => $this->method->configData(),
+            'config' => $config,
 
             'endpoints' => [
                 'config' => Api::configEndpointUrl($this->method->instance_id),
@@ -108,6 +110,10 @@ class Client
             ],
 
             'globalMethods' => $globalMethods,
+
+            'goToShippingZones' => $this->showGlobalMethodStub()
+                ? admin_url('admin.php?page=wc-settings&tab=shipping')
+                : null,
         ]);
     }
 
@@ -123,6 +129,20 @@ class Client
         $this->css[] = $paths->serverAssetUrl('client.css');
 
         $this->inited = true;
+    }
+
+    private function showGlobalMethodStub(): bool
+    {
+        if ($this->method->instance_id || array_key_exists('wbs_global', $_GET)) return false;
+
+        try { $doc = $this->method->config(); }
+        catch (\Throwable $e) { return false; }
+
+        $methods = $doc->methods;
+        if (count($methods) > 1) return false;
+        if (count($methods) === 1 && !reset($methods)->empty()) return false;
+
+        return true;
     }
 
     private static function getAllLocations(): array

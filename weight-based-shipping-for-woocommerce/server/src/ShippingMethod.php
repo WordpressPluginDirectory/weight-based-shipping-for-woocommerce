@@ -23,7 +23,7 @@ class ShippingMethod extends WC_Shipping_Method
     {
         $this->plugin_id = Plugin::ID;
         $this->id = Plugin::ID;
-        $this->title = $this->method_title = 'Weight Based Shipping';
+        $this->title = $this->method_title = 'Weight Based Shipping (Legacy)';
         $this->instance_id = absint($instanceId);
 
         $this->supports = [
@@ -43,6 +43,8 @@ class ShippingMethod extends WC_Shipping_Method
                 $this->supports[] = 'settings';
             }
         }
+
+        $this->method_description = 'The classic UI for weight-based shipping options. It works fine and is supported. However, for new setups, the new UI is recommended.';
     }
 
     public function config($config = null)

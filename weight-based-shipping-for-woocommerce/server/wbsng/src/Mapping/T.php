@@ -38,6 +38,14 @@ class T
     /**
      * @throws Invalid
      */
+    public static function optionalInt($v, int $default = null): ?int
+    {
+        return self::type('integer', $v, true) ?? $default;
+    }
+
+    /**
+     * @throws Invalid
+     */
     public static function string($v): string
     {
         return self::type('string', $v);

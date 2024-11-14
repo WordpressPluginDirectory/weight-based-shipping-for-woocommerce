@@ -49,13 +49,13 @@ class Method
         $this->settings = $settings ?? new Settings();
     }
 
-    public function apply(Bundle $items, ?Destination $dest): ?Shipment
+    public function apply(Bundle $items, ?Destination $dest, int $methodId): ?Shipment
     {
         $shrinks = 0;
 
         start:
 
-        $shipment = $this->_apply($items, $dest);
+        $shipment = $this->_apply($items, $dest, $methodId);
 
         if ($shipment && $shipment->bundle->count() < $items->count()) {
             $items = $shipment->bundle;
@@ -75,7 +75,7 @@ class Method
         return !$this->disabled && !$this->empty();
     }
 
-    private function empty(): bool
+    public function empty(): bool
     {
         /** @noinspection PhpLoopNeverIteratesInspection */
         foreach ($this->rules as $ignored) {
@@ -84,7 +84,7 @@ class Method
         return true;
     }
 
-    private function _apply(Bundle $items, ?Destination $dest): ?Shipment
+    private function _apply(Bundle $items, ?Destination $dest, int $methodId): ?Shipment
     {
         if ($this->disabled) {
             return null;
@@ -137,7 +137,7 @@ class Method
             $effectiveTitle = $this->name;
         }
 
-        return new Shipment($effectiveTitle, $charge, $items->exclude($unmatched), $this);
+        return new Shipment($effectiveTitle, $charge, $items->exclude($unmatched), $methodId);
     }
 }
 
@@ -152,7 +152,7 @@ trait MethodMapping
 
         $title = $data['name']->map([T::class, 'nonWhitespace']);
 
-        $rules = new CachingIterator(function() use ($data) {
+        $rules = new CachingIterator(function() use($data) {
             foreach ($data['rules'] as $r) {
                 $rule = $r->map([Rule::class, 'unserialize']);
                 if (isset($rule)) {

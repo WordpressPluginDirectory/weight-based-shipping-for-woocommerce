@@ -2,9 +2,11 @@
 
 <style>
     .form-table + p.submit, /* wc pre-2.6. */
-    #mainform > h2 {
+
+    #mainform > h2, #mainform > p:last-child {
         display: none;
     }
+    
     .woocommerce-recommended-shipping-extensions {
         display: none !important;
     }

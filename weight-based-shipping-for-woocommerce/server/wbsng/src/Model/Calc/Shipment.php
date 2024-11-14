@@ -9,7 +9,6 @@ use Gzp\WbsNg\Common\Equality\Traits\StandardEquality;
 use Gzp\WbsNg\Common\Hashing\OrderedHash;
 use Gzp\WbsNg\Mapping\Context;
 use Gzp\WbsNg\Mapping\T;
-use Gzp\WbsNg\Model\Config\Method;
 use Gzp\WbsNg\Model\Order\Bundle;
 
 
@@ -39,14 +38,15 @@ class Shipment implements Equality
     public $bundle;
 
     /**
-     * Method is null after deserialization and is not used in comparison.
+     * Two shipments using different methods are not equal,
+     * even with the same title, price, and bundle.
      *
-     * @var ?Method
+     * @var int
      */
     public $method;
 
 
-    public function __construct(string $title, Decimal $price, Bundle $items, Method $method = null)
+    public function __construct(string $title, Decimal $price, Bundle $items, int $method)
     {
         assert(!$items->empty(), 'shipment package must not be empty');
         $this->title = $title;
@@ -60,7 +60,8 @@ class Shipment implements Equality
         return
             $this->title === $to->title &&
             $this->price->equals($to->price) &&
-            $this->bundle->equals($to->bundle);
+            $this->bundle->equals($to->bundle) &&
+            $this->method === $to->method;
     }
 
     protected function _hash(): int
@@ -68,7 +69,8 @@ class Shipment implements Equality
         return OrderedHash::from(
             $this->title,
             $this->price,
-            $this->bundle
+            $this->bundle,
+            $this->method
         );
     }
 }
@@ -82,6 +84,7 @@ trait ShipmentSerialization
             'title' => $this->title,
             'price' => $this->price->__toString(),
             'bundle' => $this->bundle->serialize(),
+            'method' => $this->method,
         ];
     }
 
@@ -92,7 +95,10 @@ trait ShipmentSerialization
             $data['title']->map([T::class, 'string']),
             $data['price']->map([T::class, 'decimal']),
             $data['bundle']->map([Bundle::class, 'unserialize']),
-            null
+
+            // Optional because introduced later.
+            // Migrating all existing orders might take much time.
+            $data['method']->map([T::class, 'optionalInt']) ?? 0
         );
     }
 }
