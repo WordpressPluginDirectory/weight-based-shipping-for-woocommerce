@@ -1,6 +1,6 @@
 === WooCommerce Weight Based Shipping ===
 Contributors: dangoodman
-Tags: woocommerce shipping, weight-based shipping, table rate shipping
+Tags: woocommerce shipping, table rate shipping, woocommerce free shipping, weight-based shipping, rule-based shipping
 Requires PHP: 7.2
 Requires at least: 4.6
 Tested up to: 6.7
@@ -8,52 +8,39 @@ WC requires at least: 5.0
 WC tested up to: 9.4
 
 
-Simple yet flexible weight-based shipping for WooCommerce
+Weight Based Shipping is a flexible and widely-used solution to calculate shipping costs based on the total cart weight and value.
 
 == Description ==
 
-Weight Based Shipping is a simple yet flexible shipping method for WooCommerce focused mainly on the order weight (but not limited to) to calculate shipping cost. The plugin allows you to add multiple rules based on various conditions.
+Weight Based Shipping is a flexible and widely-used solution for sites using WooCommerce that allows store owners to calculate shipping costs based on the weight and value of the products in the cart. It offers various customization options to set shipping rules based on different conditions, enabling tailored shipping rates for different customer needs and scenarios.
 
-<br>
-
-= Features =
-
+<p>&nbsp;</p>
+= Tiered weight-based rates for weight ranges =
 <p></p>
-<ul>
-    <li>
-        <strong>Order weight, subtotal and destination</strong><br>
-        Create as many shipping rules as you need for different order destinations, weight and subtotal ranges.
-        <p>&nbsp;</p>
-    </li>
+Weight Based Shipping allows creating incremental shipping costs based on defined weight ranges. For example, you can set a specific rate for orders up to 5 kg, a higher rate for 5–10 kg, and another rate for weights above 10 kg. This structure enables you to charge progressively more as the package weight increases, offering a fair and predictable pricing model that matches shipping costs to the weight of the items.
 
-    <li>
-        <strong>Flexible Price Calculation</strong><br>
-        Each rule can be configured to expose a constant price (like Flat Rate) or a progressive price based on the cart weight, or both.
-        <p>&nbsp;</p>
-    </li>
+<p>&nbsp;</p>
+= Free shipping over a threshold =
+<p></p>
+Offer free shipping once an order reaches a specific threshold, such as a minimum cart total or a minimum/maximum weight. For example, you might provide free shipping on orders over $50 or on packages weighing more than 20 kg. This approach encourages customers to buy more to qualify for free shipping, boosting average order value while keeping lighter, smaller orders cost-effective.
 
-    <li>
-        <strong>Conditional Free Shipping</strong><br>
-        The plugin allows you to set up a free shipping threshold.
-        <p>&nbsp;</p>
-    </li>
+<p>&nbsp;</p>
+= Shipping classes [Pro] =
+<p></p>
+Shipping classes support provides flexibility in configuring shipping rates for your products. You can set up custom shipping rates for specific product groups — frozen, fragile, bulky, drop-shipped, etc. Additionally, you have the option to offer free shipping for selected products or exclude certain items from free shipping. The feature also allows you to enable or disable specific shipping methods on a per-product basis.
+[compare features](https://weightbasedshipping.com/upgrade)&nbsp;&nbsp;&nbsp;[more details](https://weightbasedshipping.com)
 
-    <li>
-        <strong>Shipping Classes Support</strong> (available in the <a href="https://weightbasedshipping.com">Plus version</a>)<br>
-        For each shipping class you have you can override the way shipping price is calculated for it.
-    </li>
-</ul>
 
-See <a href="https://wordpress.org/plugins/weight-based-shipping-for-woocommerce/screenshots/">screenshots</a> for the list of all supported options.
-<br><br>
+<p>&nbsp;</p>
+Feel free to [contact support](https://wordpress.org/support/plugin/weight-based-shipping-for-woocommerce/) if you have any questions.
 
-<blockquote>
-    Also, check out our <a href="https://tablerateshipping.com">advanced table rate shipping plugin for WooCommerce</a>.<br>
-    <br>
-</blockquote>
+Like the plugin? Leave a [review](https://wordpress.org/support/plugin/weight-based-shipping-for-woocommerce/reviews/#new-post)!
 
 
 == Changelog ==
+
+= 6.2.0 =
+* Limit the width of the Destination column.
 
 = 6.1.0 =
 * Rename the column Amount to Value.
@@ -472,6 +459,6 @@ Previously, weight based shipping option has not been shown to user if total wei
 
 == Screenshots ==
 
-1. A configuration example
-2. Another rule settings
-3. How that could look to customer
+1. Tiered weight-based shipping configuration
+2. Free shipping over threshold and tiered weight-based shipping
+3. Per-product shipping with shipping classes
