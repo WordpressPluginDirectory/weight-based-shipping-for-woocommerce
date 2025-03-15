@@ -13,7 +13,7 @@ class Settings
     public $price;
 
 
-    public function __construct(PriceSettings $price = null)
+    public function __construct(?PriceSettings $price = null)
     {
         $this->price = $price ?? new PriceSettings();
     }

@@ -43,7 +43,7 @@ class Price implements Equality
 //        return new self($base, $tax, $priceDiscount, $taxDiscount);
 //    }
 
-    public static function fromWc(Decimal $base, Decimal $tax = null, Decimal $baseDiscount = null, Decimal $taxDiscount = null): self
+    public static function fromWc(Decimal $base, ?Decimal $tax = null, ?Decimal $baseDiscount = null, ?Decimal $taxDiscount = null): self
     {
         $tax = $tax ?? Decimal::$zero;
         $baseDiscount = $baseDiscount ?? Decimal::$zero;
@@ -72,7 +72,7 @@ class Price implements Equality
         ];
     }
 
-    public function __construct(Decimal $base, Decimal $withTax = null, Decimal $withDiscount = null, Decimal $withTaxAndDiscount = null)
+    public function __construct(Decimal $base, ?Decimal $withTax = null, ?Decimal $withDiscount = null, ?Decimal $withTaxAndDiscount = null)
     {
         $this->base = $base;
         $this->withTax = $withTax ?? $base;

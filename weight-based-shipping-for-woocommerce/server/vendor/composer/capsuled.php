@@ -146,9 +146,9 @@
       'Dgm\\WpAjaxApi\\RegisteredEndpoint' => 'WbsVendors\\Dgm\\WpAjaxApi\\RegisteredEndpoint',
       'Deferred\\Deferred' => 'WbsVendors\\Deferred\\Deferred',
       'Dgm\\Range\\Range' => 'WbsVendors\\Dgm\\Range\\Range',
-      'Composer\\Autoload\\ComposerStaticInit479ae18c2d30f57d06aa396853967518' => 'WbsVendors\\Composer\\Autoload\\ComposerStaticInit479ae18c2d30f57d06aa396853967518',
+      'Composer\\Autoload\\ComposerStaticInitadc07ff5c4f6a5f3fc1111388091f881' => 'WbsVendors\\Composer\\Autoload\\ComposerStaticInitadc07ff5c4f6a5f3fc1111388091f881',
       'Composer\\Autoload\\ClassLoader' => 'WbsVendors\\Composer\\Autoload\\ClassLoader',
-      'ComposerAutoloaderInit479ae18c2d30f57d06aa396853967518' => 'WbsVendors_ComposerAutoloaderInit479ae18c2d30f57d06aa396853967518',
+      'ComposerAutoloaderInitadc07ff5c4f6a5f3fc1111388091f881' => 'WbsVendors_ComposerAutoloaderInitadc07ff5c4f6a5f3fc1111388091f881',
     ),
     'func' => 
     array (
@@ -304,9 +304,9 @@
       'WbsVendors\\Dgm\\WpAjaxApi\\RegisteredEndpoint' => 'Dgm\\WpAjaxApi\\RegisteredEndpoint',
       'WbsVendors\\Deferred\\Deferred' => 'Deferred\\Deferred',
       'WbsVendors\\Dgm\\Range\\Range' => 'Dgm\\Range\\Range',
-      'WbsVendors\\Composer\\Autoload\\ComposerStaticInit479ae18c2d30f57d06aa396853967518' => 'Composer\\Autoload\\ComposerStaticInit479ae18c2d30f57d06aa396853967518',
+      'WbsVendors\\Composer\\Autoload\\ComposerStaticInitadc07ff5c4f6a5f3fc1111388091f881' => 'Composer\\Autoload\\ComposerStaticInitadc07ff5c4f6a5f3fc1111388091f881',
       'WbsVendors\\Composer\\Autoload\\ClassLoader' => 'Composer\\Autoload\\ClassLoader',
-      'WbsVendors_ComposerAutoloaderInit479ae18c2d30f57d06aa396853967518' => 'ComposerAutoloaderInit479ae18c2d30f57d06aa396853967518',
+      'WbsVendors_ComposerAutoloaderInitadc07ff5c4f6a5f3fc1111388091f881' => 'ComposerAutoloaderInitadc07ff5c4f6a5f3fc1111388091f881',
     ),
     'func' => 
     array (

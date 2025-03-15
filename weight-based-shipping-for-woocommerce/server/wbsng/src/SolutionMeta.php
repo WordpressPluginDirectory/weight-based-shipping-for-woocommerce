@@ -15,7 +15,7 @@ class SolutionMeta
         return json_encode($solution->serialize());
     }
 
-    public static function unserialize($json, string &$error = null): ?Solution
+    public static function unserialize($json, ?string &$error = null): ?Solution
     {
         if ($json === null || $json === '' || $json === false) {
             return null;

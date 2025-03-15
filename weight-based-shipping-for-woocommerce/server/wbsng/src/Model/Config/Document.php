@@ -22,9 +22,9 @@ class Document
     public $settings;
 
     /**
-     * @param list<Method> $methods
+     * @param list<Method>|null $methods
      */
-    public function __construct(array $methods = null, Document\Settings $settings = null)
+    public function __construct(?array $methods = null, ?Document\Settings $settings = null)
     {
         $this->methods = $methods ?? [];
         $this->settings = $settings ?? new Document\Settings();

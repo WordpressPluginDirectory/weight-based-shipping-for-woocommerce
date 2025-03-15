@@ -38,7 +38,7 @@ class ShippingMethod extends WC_Shipping_Method
         ];
 
         if (!$this->instance_id) {
-            $globalMethodEnabled = !class_exists('Wbs\Plugin') || (get_option('wbs_global_methods') ?: 'only-wbs') !== 'only-wbs';
+            $globalMethodEnabled = !class_exists('Wbs\Plugin') || (get_option('wbs_global_methods') ?: 'only-wbsng') !== 'only-wbs';
             if ($globalMethodEnabled) {
                 $this->supports[] = 'settings';
             }
@@ -92,7 +92,7 @@ class ShippingMethod extends WC_Shipping_Method
      * @throws ConfigError
      * @noinspection PhpDocRedundantThrowsInspection
      */
-    public function config(array $data = null): Document
+    public function config(?array $data = null): Document
     {
         $data = $data ?? $this->configData();
         if (!isset($data)) {
@@ -184,6 +184,34 @@ class ShippingMethod extends WC_Shipping_Method
     public function get_instance_option_key(): string
     {
         return '';
+    }
+
+    public function get_option($key, $empty_value = null)
+    {
+        // Issue: The shipping tax is excluded from the shippping total after an order is placed
+        //
+        // Areas affected:
+        //  — The total amount to pay.
+        //  — The shipping total displayed on the "order received" page.
+        //  — The order details in the backend. The shipping tax clause is presented in the order details but isn't
+        //    actually included to the order total.
+        //
+        // Cause: WC_Order_Item_Shipping::calculate_taxes() (since WC 9.7) checks a shipping method's tax_status as an
+        // optimization, despite the fact that tax status is a property of a shipping option rather than a shipping
+        // method.
+        //
+        // Conditions:
+        // — WooCommerce 9.7+ (no repro with 9.6.2)
+        // — Checkout block (no repro with the classic checkout)
+        // — Multiple taxes: standard for shipping, reduced for cart (other cases might be affected as well)
+        //
+        // Fix: Always return 'taxable' since we don't have enough context at this point. It should not break anything
+        // since WC_Order_Item_Shipping::calculate_taxes() is the only caller of the get_option method.
+        if (version_compare(WC()->version, '9.7.0') >= 0 && $key === 'tax_status') {
+            return 'taxable';
+        }
+
+        return parent::get_option($key, $empty_value);
     }
 
     /**

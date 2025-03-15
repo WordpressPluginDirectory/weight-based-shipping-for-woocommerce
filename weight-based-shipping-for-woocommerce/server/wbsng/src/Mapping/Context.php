@@ -17,7 +17,7 @@ class Context implements \ArrayAccess, \IteratorAggregate
      * @param mixed $value
      * @param ?callable(self, Throwable): Throwable $mapError
      */
-    public static function of($value, callable $mapError = null): self
+    public static function of($value, ?callable $mapError = null): self
     {
         $frame = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
         $label = "{$frame['file']}:{$frame['line']}";
@@ -29,7 +29,7 @@ class Context implements \ArrayAccess, \IteratorAggregate
      * @param mixed $value
      * @param ?callable(self, Throwable): Throwable $mapError
      */
-    private function __construct($value, ?self $parent, string $subpath, string $label, callable $mapError = null)
+    private function __construct($value, ?self $parent, string $subpath, string $label, ?callable $mapError = null)
     {
         $this->parent = $parent;
         $this->value = $value;

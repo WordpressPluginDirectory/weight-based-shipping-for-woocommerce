@@ -33,7 +33,7 @@ class Bundle implements Equality, Countable, IteratorAggregate
     /**
      * @param Set<Item>|iterable<mixed, Item> $items Caller must not modify the set after construction.
      */
-    public function __construct($items = [], Price $priceOverride = null)
+    public function __construct($items = [], ?Price $priceOverride = null)
     {
         if (!$items instanceof Set) {
             $items = new Set($items);

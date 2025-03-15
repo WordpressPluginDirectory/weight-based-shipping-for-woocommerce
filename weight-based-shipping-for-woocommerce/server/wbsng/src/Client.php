@@ -71,7 +71,7 @@ class Client
         $globalMethods = null;
         if (!$this->method->instance_id && class_exists('Wbs\Api') && class_exists('Wbs\Plugin')) {
             $globalMethods = [
-                'state' => get_option('wbs_global_methods') ?: 'only-wbs',
+                'state' => get_option('wbs_global_methods') ?: 'only-wbsng',
                 'endpoint' => \Wbs\Api::$globalSwitch->url(),
                 'wbsRedirectUrl' => \Wbs\Plugin::shippingUrl(\Wbs\Plugin::ID),
             ];

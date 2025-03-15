@@ -48,7 +48,7 @@ class Item implements Equality
     public $shclass;
 
 
-    public function __construct(int $id, string $name = null, int $quantity = null, Decimal $weight = null, Price $price = null, int $shclass = null)
+    public function __construct(int $id, ?string $name = null, ?int $quantity = null, ?Decimal $weight = null, ?Price $price = null, ?int $shclass = null)
     {
         $this->id = $id;
         $this->name = $name ?? '';

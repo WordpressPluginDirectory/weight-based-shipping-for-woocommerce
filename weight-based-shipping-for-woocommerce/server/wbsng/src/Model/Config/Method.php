@@ -42,7 +42,7 @@ class Method
     /**
      * @param \IteratorAggregate<mixed, Rule>|list<Rule> $rules
      */
-    public function __construct(string $name, $rules, Settings $settings = null)
+    public function __construct(string $name, $rules, ?Settings $settings = null)
     {
         $this->name = $name;
         $this->rules = is_array($rules) ? new IteratorAggregateFrom($rules) : $rules;

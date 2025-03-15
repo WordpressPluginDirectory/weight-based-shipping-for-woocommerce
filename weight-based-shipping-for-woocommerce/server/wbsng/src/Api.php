@@ -19,7 +19,7 @@ class Api
         $wpAjaxApi->install();
     }
 
-    public static function configEndpointUrl(int $instanceId = null): string
+    public static function configEndpointUrl(?int $instanceId = null): string
     {
         return self::$config->url([ConfigEndpoint::InstanceIdArg => $instanceId]);
     }

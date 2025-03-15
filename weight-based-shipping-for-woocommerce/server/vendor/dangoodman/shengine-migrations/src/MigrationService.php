@@ -33,7 +33,7 @@ class MigrationService implements \WbsVendors\Dgm\PluginServices\IService, \WbsV
         if (did_action('plugins_loaded')) {
             $this->migrate();
         } else {
-            add_action('plugins_loaded', array($this, 'migrate'));
+            add_action('plugins_loaded', array($this, 'migrate'), 10, 0);
         }
     }
 

@@ -104,7 +104,7 @@ class Action
      */
     public $drop;
 
-    public function __construct(ShclassCond $drop = null)
+    public function __construct(?ShclassCond $drop = null)
     {
         $this->drop = $drop ?? ShclassCond::$NONE;
     }
@@ -188,7 +188,7 @@ trait RuleMapping
 
         $action = Context::of($action);
 
-        return $action['type']->map(function(string $v) use ($action) {
+        return $action['type']->map(function(string $v) use($action) {
             switch ($v) {
 
                 case 'drop':

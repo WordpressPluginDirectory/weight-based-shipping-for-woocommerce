@@ -22,7 +22,7 @@ class T
     /**
      * @throws Invalid
      */
-    public static function optionalBool($v, bool $default = null): ?bool
+    public static function optionalBool($v, ?bool $default = null): ?bool
     {
         return self::type('boolean', $v, true) ?? $default;
     }
@@ -38,7 +38,7 @@ class T
     /**
      * @throws Invalid
      */
-    public static function optionalInt($v, int $default = null): ?int
+    public static function optionalInt($v, ?int $default = null): ?int
     {
         return self::type('integer', $v, true) ?? $default;
     }
@@ -54,7 +54,7 @@ class T
     /**
      * @throws Invalid
      */
-    public static function optionalString($v, string $default = null): ?string
+    public static function optionalString($v, ?string $default = null): ?string
     {
         return self::type('string', $v, true) ?? $default;
     }
@@ -96,7 +96,7 @@ class T
     /**
      * @throws Invalid
      */
-    public static function optionalDecimal($v, Decimal $default = null): ?Decimal
+    public static function optionalDecimal($v, ?Decimal $default = null): ?Decimal
     {
         $v = self::optionalString($v);
         if (!isset($v)) {
