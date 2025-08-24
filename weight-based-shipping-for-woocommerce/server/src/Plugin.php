@@ -210,6 +210,7 @@ class Plugin
                 try {
                     $trv = WC_Cache_Helper::get_transient_version('shipping');
                     if ($value === null || (int)($value[$field] ?? null) === 0 || ($value['version'] ?? null) !== $trv) {
+                        if ($value === false) $value = [];
                         $value[$field] = max(1, wc_get_shipping_method_count(true));
                         $value['version'] = $trv;
                     }
