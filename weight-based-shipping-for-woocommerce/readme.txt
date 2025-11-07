@@ -1,11 +1,11 @@
 === Weight Based Shipping for WooCommerce ===
 Contributors: dangoodman
 Tags: woocommerce shipping, table rate shipping, woocommerce free shipping, weight-based shipping, rule-based shipping
-Requires PHP: 7.2
-Requires at least: 4.6
+Requires PHP: 7.3
+Requires at least: 5.8
 Tested up to: 6.8
-WC requires at least: 5.0
-WC tested up to: 10.1
+WC requires at least: 7.0
+WC tested up to: 10.3
 
 
 Weight Based Shipping is a flexible and widely-used solution to calculate shipping costs based on the total cart weight and value.
@@ -38,6 +38,17 @@ Like the plugin? Leave a [review](https://wordpress.org/support/plugin/weight-ba
 
 
 == Changelog ==
+
+= 6.10.1 =
+* No longer test with PHP 7.2 (end-of-life reached 2020-11-30), WooCommerce prior to 7.0 (released in 2022-10-11), WordPress prior to 5.8 (released in 2021-07-20).
+* Avoid settings save errors on extra whitespace added to the responses by other plugins.
+
+= 6.10.0 =
+* Fix minor legacy UI appearance issues.
+* Tested with WooCommerce 10.3.
+
+= 6.9.1 =
+* Tested with WooCommerce 10.2.
 
 = 6.9.0 =
 * Fix "Automatic conversion of false to array is deprecated".

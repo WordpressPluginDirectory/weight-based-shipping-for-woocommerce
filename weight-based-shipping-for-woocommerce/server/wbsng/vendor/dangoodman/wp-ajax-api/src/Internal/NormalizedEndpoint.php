@@ -28,14 +28,14 @@ class NormalizedEndpoint extends Endpoint
 
     public function get(Request $request): Response
     {
-        return $this->handleExceptions(function() use ($request) {
+        return $this->handleExceptions(function() use($request) {
             return $this->endpoint->get($request);
         });
     }
 
     public function post(Request $request): Response
     {
-        return $this->handleExceptions(function() use ($request) {
+        return $this->handleExceptions(function() use($request) {
             return $this->endpoint->post($request);
         });
     }

@@ -50,7 +50,7 @@ class Processor implements IProcessor
             return $rates;
         }
 
-        return Arrays::map($rates, function (IRate $rate) use ($title, $taxable) {
+        return Arrays::map($rates, function (IRate $rate) use($title, $taxable) {
 
             if ($title !== null && $rate->getTitle() === null) {
                 $rate = new Rate($rate->getCost(), $title, $rate->isTaxable());

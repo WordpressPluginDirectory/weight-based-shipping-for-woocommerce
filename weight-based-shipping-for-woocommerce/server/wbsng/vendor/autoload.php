@@ -16,7 +16,7 @@
     }
 
     $classes = require(__DIR__.'/composer/autoload_classmap.php');
-    spl_autoload_register(function($class) use ($classes): void {
+    spl_autoload_register(function($class) use($classes): void {
         $file = $classes[$class] ?? null;
         if (isset($file)) {
             require($file);

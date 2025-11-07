@@ -71,7 +71,7 @@ class Package implements IPackage
 
     public function getTerms($taxonomy)
     {
-        $terms = Arrays::map($this->getItems(), function (IItem $item) use ($taxonomy) {
+        $terms = Arrays::map($this->getItems(), function (IItem $item) use($taxonomy) {
             
             $terms = $item->getTerms($taxonomy);
             
