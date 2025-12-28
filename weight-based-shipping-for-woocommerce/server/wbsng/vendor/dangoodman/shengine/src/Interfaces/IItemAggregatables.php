@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Interfaces;
+namespace WbsngVendors\Dgm\Shengine\Interfaces;
 
-use GzpWbsNgVendors\Dgm\Shengine\Model\Price;
+use WbsngVendors\Dgm\Shengine\Model\Price;
 
 
 interface IItemAggregatables

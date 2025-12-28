@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math;
+namespace WbsngVendors\Brick\Math;
 
-use GzpWbsNgVendors\Brick\Math\Exception\DivisionByZeroException;
+use WbsngVendors\Brick\Math\Exception\DivisionByZeroException;
 use Brick\Math\Exception\MathException;
-use GzpWbsNgVendors\Brick\Math\Exception\NumberFormatException;
+use WbsngVendors\Brick\Math\Exception\NumberFormatException;
 use Brick\Math\Exception\RoundingNecessaryException;
 
 /**

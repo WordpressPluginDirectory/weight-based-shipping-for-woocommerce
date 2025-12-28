@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Range;
+namespace WbsngVendors\Dgm\Range;
 
-use GzpWbsNgVendors\Dgm\SimpleProperties\SimpleProperties;
-use GzpWbsNgVendors\Dgm\Comparator\IComparator;
+use WbsngVendors\Dgm\SimpleProperties\SimpleProperties;
+use WbsngVendors\Dgm\Comparator\IComparator;
 
 
 /**

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math\Internal\Calculator;
+namespace WbsngVendors\Brick\Math\Internal\Calculator;
 
-use GzpWbsNgVendors\Brick\Math\Internal\Calculator;
+use WbsngVendors\Brick\Math\Internal\Calculator;
 
 /**
  * Calculator implementation using only native PHP code.

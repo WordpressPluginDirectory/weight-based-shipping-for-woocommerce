@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine;
+namespace WbsngVendors\Dgm\Shengine;
 
-use GzpWbsNgVendors\Dgm\NumberUnit\NumberUnit;
-use GzpWbsNgVendors\Dgm\SimpleProperties\SimpleProperties;
+use WbsngVendors\Dgm\NumberUnit\NumberUnit;
+use WbsngVendors\Dgm\SimpleProperties\SimpleProperties;
 
 
 /**

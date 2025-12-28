@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
-use GzpWbsNgVendors\Dgm\SimpleProperties\SimpleProperties;
+use WbsngVendors\Dgm\SimpleProperties\SimpleProperties;
 
 
 /**

@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Calculators;
+namespace WbsngVendors\Dgm\Shengine\Calculators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAggregator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICalculator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAggregator;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICalculator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 class AggregatedCalculator implements ICalculator

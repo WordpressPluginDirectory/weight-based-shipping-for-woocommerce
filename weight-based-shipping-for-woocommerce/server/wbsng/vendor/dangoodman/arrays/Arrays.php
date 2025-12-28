@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Arrays;
+namespace WbsngVendors\Dgm\Arrays;
 
 use Traversable;
 

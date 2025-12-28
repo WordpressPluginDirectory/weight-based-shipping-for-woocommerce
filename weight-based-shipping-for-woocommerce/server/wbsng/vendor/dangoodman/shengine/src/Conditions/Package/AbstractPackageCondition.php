@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Package;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Package;
 
-use GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 abstract class AbstractPackageCondition extends AbstractCondition

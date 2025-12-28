@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Package;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Package;
 
-use GzpWbsNgVendors\Dgm\Shengine\Grouping\ByItemGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Grouping\ByItemGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 use Dgm\Shengine\Model\Package;
 use InvalidArgumentException;
 

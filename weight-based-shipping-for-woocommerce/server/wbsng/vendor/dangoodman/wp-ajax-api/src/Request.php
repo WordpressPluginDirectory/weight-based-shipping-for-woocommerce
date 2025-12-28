@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Dgm\WpAjaxApi;
+namespace WbsngVendors\Dgm\WpAjaxApi;
 
 
-use GzpWbsNgVendors\Dgm\WpAjaxApi\Internal\ResponseException;
+use WbsngVendors\Dgm\WpAjaxApi\Internal\ResponseException;
 
 
 class Request

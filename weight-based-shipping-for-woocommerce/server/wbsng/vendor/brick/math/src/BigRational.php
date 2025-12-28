@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math;
+namespace WbsngVendors\Brick\Math;
 
-use GzpWbsNgVendors\Brick\Math\Exception\DivisionByZeroException;
+use WbsngVendors\Brick\Math\Exception\DivisionByZeroException;
 use Brick\Math\Exception\MathException;
 use Brick\Math\Exception\NumberFormatException;
-use GzpWbsNgVendors\Brick\Math\Exception\RoundingNecessaryException;
+use WbsngVendors\Brick\Math\Exception\RoundingNecessaryException;
 
 /**
  * An arbitrarily large rational number.

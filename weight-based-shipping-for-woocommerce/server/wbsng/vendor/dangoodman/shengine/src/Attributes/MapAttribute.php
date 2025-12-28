@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Attributes;
+namespace WbsngVendors\Dgm\Shengine\Attributes;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 abstract class MapAttribute extends AbstractAttribute

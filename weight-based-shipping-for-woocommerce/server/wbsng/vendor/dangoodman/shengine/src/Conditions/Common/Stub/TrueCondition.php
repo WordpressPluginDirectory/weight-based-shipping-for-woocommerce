@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\Stub;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common\Stub;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
 
 
 class TrueCondition extends ClassNameAware implements ICondition

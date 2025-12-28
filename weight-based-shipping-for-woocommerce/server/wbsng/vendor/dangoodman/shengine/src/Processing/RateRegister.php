@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Processing;
+namespace WbsngVendors\Dgm\Shengine\Processing;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRate;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Rate;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRate;
+use WbsngVendors\Dgm\Shengine\Model\Rate;
 
 
 class RateRegister implements IRate

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Dgm\WpAjaxApi;
+namespace WbsngVendors\Dgm\WpAjaxApi;
 
 
 abstract class Endpoint

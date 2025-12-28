@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Operations;
+namespace WbsngVendors\Dgm\Shengine\Operations;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IOperation;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\IOperation;
 
 
 abstract class AbstractOperation extends ClassNameAware implements IOperation

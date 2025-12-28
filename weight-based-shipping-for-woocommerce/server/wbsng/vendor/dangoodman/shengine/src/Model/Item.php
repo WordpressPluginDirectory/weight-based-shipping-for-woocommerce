@@ -1,8 +1,8 @@
 <?php /** @noinspection PhpMultipleClassesDeclarationsInOneFile */
 
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
 
 
 class Item implements IItem

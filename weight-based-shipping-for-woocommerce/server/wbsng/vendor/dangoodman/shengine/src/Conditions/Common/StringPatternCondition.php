@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
 
 
 class StringPatternCondition implements ICondition

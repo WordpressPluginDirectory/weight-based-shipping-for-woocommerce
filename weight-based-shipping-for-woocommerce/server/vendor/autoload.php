@@ -7,4 +7,4 @@ call_user_func(require(__DIR__.'/dangoodman/composer-capsule-runtime/autoload.ph
 
 require_once __DIR__ . '/composer/autoload_real.php';
 
-return WbsVendors_ComposerAutoloaderInitbaa99a423a483f0c59ae2c073f38e740::getLoader();
+return WbsVendors_ComposerAutoloaderInit5b398313032dbae0ce3c7884e416767a::getLoader();

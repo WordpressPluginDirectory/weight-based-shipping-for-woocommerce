@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\Compare;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common\Compare;
 
-use GzpWbsNgVendors\Dgm\Comparator\IComparator;
-use GzpWbsNgVendors\Dgm\Range\Range;
-use GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
+use WbsngVendors\Dgm\Comparator\IComparator;
+use WbsngVendors\Dgm\Range\Range;
+use WbsngVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
 
 
 class BetweenCondition extends AbstractCondition

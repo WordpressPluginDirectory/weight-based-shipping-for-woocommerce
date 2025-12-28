@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Loader;
+namespace WbsngVendors\Dgm\Shengine\Loader;
 
 
 interface ILoader

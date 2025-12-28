@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common;
 
-use Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
 
 
 abstract class GroupCondition extends AbstractCondition

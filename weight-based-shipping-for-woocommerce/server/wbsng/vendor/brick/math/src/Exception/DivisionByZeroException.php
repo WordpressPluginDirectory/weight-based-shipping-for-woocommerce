@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math\Exception;
+namespace WbsngVendors\Brick\Math\Exception;
 
 /**
  * Exception thrown when a division by zero occurs.

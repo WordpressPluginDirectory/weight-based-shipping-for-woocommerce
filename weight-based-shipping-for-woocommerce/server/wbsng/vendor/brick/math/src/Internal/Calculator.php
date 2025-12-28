@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math\Internal;
+namespace WbsngVendors\Brick\Math\Internal;
 
-use GzpWbsNgVendors\Brick\Math\Exception\RoundingNecessaryException;
-use GzpWbsNgVendors\Brick\Math\RoundingMode;
+use WbsngVendors\Brick\Math\Exception\RoundingNecessaryException;
+use WbsngVendors\Brick\Math\RoundingMode;
 
 /**
  * Performs basic operations on arbitrary size integers.

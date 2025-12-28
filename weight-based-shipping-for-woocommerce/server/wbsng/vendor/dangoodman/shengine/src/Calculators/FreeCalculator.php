@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Calculators;
+namespace WbsngVendors\Dgm\Shengine\Calculators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICalculator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Rate;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICalculator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Model\Rate;
 
 
 class FreeCalculator implements ICalculator

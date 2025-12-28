@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\NumberUnit;
+namespace WbsngVendors\Dgm\NumberUnit;
 
-use GzpWbsNgVendors\Dgm\Comparator\NumberComparator;
+use WbsngVendors\Dgm\Comparator\NumberComparator;
 
 
 class NumberUnit extends NumberComparator

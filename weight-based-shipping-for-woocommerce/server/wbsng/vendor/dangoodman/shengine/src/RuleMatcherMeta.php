@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine;
+namespace WbsngVendors\Dgm\Shengine;
 
-use GzpWbsNgVendors\Dgm\SimpleProperties\SimpleProperties;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IGrouping;
+use WbsngVendors\Dgm\SimpleProperties\SimpleProperties;
+use WbsngVendors\Dgm\Shengine\Interfaces\IGrouping;
 
 
 /**

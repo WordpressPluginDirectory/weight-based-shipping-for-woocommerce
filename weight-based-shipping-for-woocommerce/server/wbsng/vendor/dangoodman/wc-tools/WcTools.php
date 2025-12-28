@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\WcTools;
+namespace WbsngVendors\Dgm\WcTools;
 
 
 class WcTools

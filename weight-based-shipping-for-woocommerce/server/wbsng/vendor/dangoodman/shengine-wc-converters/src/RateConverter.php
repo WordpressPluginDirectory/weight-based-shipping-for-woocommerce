@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Converters;
+namespace WbsngVendors\Dgm\Shengine\Woocommerce\Converters;
 
-use GzpWbsNgVendors\Dgm\Arrays\Arrays;
+use WbsngVendors\Dgm\Arrays\Arrays;
 use Dgm\Shengine\Interfaces\IRate;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Rate;
+use WbsngVendors\Dgm\Shengine\Model\Rate;
 use WC_Shipping_Rate;
 
 

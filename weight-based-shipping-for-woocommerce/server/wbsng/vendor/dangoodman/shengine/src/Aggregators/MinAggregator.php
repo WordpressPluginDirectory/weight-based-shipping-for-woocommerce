@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Aggregators;
+namespace WbsngVendors\Dgm\Shengine\Aggregators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRate;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRate;
 
 
 class MinAggregator extends ReduceAggregator

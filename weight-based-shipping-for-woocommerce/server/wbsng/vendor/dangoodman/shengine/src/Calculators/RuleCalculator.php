@@ -1,12 +1,12 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Calculators;
+namespace WbsngVendors\Dgm\Shengine\Calculators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICalculator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IOperation;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\RateRegister;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\Registers;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICalculator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\IOperation;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Processing\RateRegister;
+use WbsngVendors\Dgm\Shengine\Processing\Registers;
 use RuntimeException;
 
 

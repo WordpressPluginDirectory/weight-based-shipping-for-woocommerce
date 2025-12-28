@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine;
+namespace WbsngVendors\Dgm\Shengine;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IMatcher;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\IMatcher;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 class RuleMatcher implements IMatcher

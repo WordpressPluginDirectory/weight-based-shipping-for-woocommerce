@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\Logic;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common\Logic;
 
-use GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\GroupCondition;
+use WbsngVendors\Dgm\Shengine\Conditions\Common\GroupCondition;
 
 
 class OrCondition extends GroupCondition

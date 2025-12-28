@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Comparator;
+namespace WbsngVendors\Dgm\Comparator;
 
 
 interface IComparator

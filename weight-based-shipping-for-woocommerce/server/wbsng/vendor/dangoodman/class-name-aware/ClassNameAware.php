@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\ClassNameAware;
+namespace WbsngVendors\Dgm\ClassNameAware;
 
 
 class ClassNameAware

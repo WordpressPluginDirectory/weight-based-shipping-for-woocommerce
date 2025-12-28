@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\Compare;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common\Compare;
 
 
 class LessCondition extends CompareCondition

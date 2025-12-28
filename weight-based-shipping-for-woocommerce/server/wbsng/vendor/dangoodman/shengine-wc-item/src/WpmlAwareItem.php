@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Model\Item;
+namespace WbsngVendors\Dgm\Shengine\Woocommerce\Model\Item;
 
 
 class WpmlAwareItem extends WoocommerceItem

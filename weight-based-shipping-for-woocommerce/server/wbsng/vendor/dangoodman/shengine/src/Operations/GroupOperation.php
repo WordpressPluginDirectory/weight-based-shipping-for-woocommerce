@@ -1,10 +1,10 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Operations;
+namespace WbsngVendors\Dgm\Shengine\Operations;
 
 use Exception;
 use Dgm\Shengine\Interfaces\IOperation;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\Registers;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Processing\Registers;
 
 
 class GroupOperation extends AbstractOperation

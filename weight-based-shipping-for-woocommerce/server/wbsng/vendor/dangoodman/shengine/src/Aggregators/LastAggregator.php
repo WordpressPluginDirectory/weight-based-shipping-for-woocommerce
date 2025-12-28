@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Aggregators;
+namespace WbsngVendors\Dgm\Shengine\Aggregators;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAggregator;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAggregator;
 
 
 class LastAggregator extends ClassNameAware implements IAggregator

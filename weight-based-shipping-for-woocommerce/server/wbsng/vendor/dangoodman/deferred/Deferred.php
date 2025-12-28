@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Deferred;
+namespace WbsngVendors\Deferred;
 
 /**
  * Defers function call until this object destruction.

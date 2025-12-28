@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRuleMeta;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRuleMeta;
 
 
 class RuleMeta implements IRuleMeta

@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Attributes;
+namespace WbsngVendors\Dgm\Shengine\Attributes;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
 
 
 class ProductAttribute extends MapAttribute

@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Model\Item;
+namespace WbsngVendors\Dgm\Shengine\Woocommerce\Model\Item;
 
-use GzpWbsNgVendors\Dgm\Shengine\Model\Item;
+use WbsngVendors\Dgm\Shengine\Model\Item;
 use RuntimeException;
-use GzpWbsNgVendors\Dgm\Arrays\Arrays;
+use WbsngVendors\Dgm\Arrays\Arrays;
 use WC_Product;
 
 

@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\PluginServices;
+namespace WbsngVendors\Dgm\PluginServices;
 
 use LogicException;
 

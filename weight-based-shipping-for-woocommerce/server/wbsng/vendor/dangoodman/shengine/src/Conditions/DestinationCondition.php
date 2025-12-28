@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions;
+namespace WbsngVendors\Dgm\Shengine\Conditions;
 
-use GzpWbsNgVendors\Dgm\Arrays\Arrays;
-use GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
+use WbsngVendors\Dgm\Arrays\Arrays;
+use WbsngVendors\Dgm\Shengine\Conditions\Common\AbstractCondition;
 use Dgm\Shengine\Model\Destination;
 
 

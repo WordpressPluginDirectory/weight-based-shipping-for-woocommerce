@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Attributes;
+namespace WbsngVendors\Dgm\Shengine\Attributes;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAttribute;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAttribute;
 
 
 abstract class AbstractAttribute extends ClassNameAware implements IAttribute

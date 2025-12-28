@@ -1,12 +1,12 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
-use GzpWbsNgVendors\Dgm\Arrays\Arrays;
-use GzpWbsNgVendors\Dgm\Shengine\Grouping\NoopGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Arrays\Arrays;
+use WbsngVendors\Dgm\Shengine\Grouping\NoopGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\Shengine\Interfaces\IGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 class Package implements IPackage

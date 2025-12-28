@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Operations;
+namespace WbsngVendors\Dgm\Shengine\Operations;
 
-use GzpWbsNgVendors\Dgm\Range\Range;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\Registers;
+use WbsngVendors\Dgm\Range\Range;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Processing\Registers;
 
 
 class ClampOperation extends AbstractOperation

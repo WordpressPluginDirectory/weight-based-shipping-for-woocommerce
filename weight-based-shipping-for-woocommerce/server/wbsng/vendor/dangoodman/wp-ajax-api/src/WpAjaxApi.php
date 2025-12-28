@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Dgm\WpAjaxApi;
+namespace WbsngVendors\Dgm\WpAjaxApi;
 
 
-use Dgm\WpAjaxApi\Internal\EndpointGateway;
+use WbsngVendors\Dgm\WpAjaxApi\Internal\EndpointGateway;
 
 
 class WpAjaxApi

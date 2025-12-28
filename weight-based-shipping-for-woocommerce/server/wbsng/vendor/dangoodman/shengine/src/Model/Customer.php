@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
 
 class Customer

@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Dgm\WpAjaxApi\Internal;
+namespace WbsngVendors\Dgm\WpAjaxApi\Internal;
 
-use GzpWbsNgVendors\Dgm\WpAjaxApi\Response;
+use WbsngVendors\Dgm\WpAjaxApi\Response;
 
 
 /**

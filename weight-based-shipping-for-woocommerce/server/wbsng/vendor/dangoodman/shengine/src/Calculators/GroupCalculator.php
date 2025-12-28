@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Calculators;
+namespace WbsngVendors\Dgm\Shengine\Calculators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICalculator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICalculator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
 
 
 class GroupCalculator implements ICalculator

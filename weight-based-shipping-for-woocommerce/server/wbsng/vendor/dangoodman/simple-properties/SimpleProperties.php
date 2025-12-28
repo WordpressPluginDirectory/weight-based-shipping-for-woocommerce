@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\SimpleProperties;
+namespace WbsngVendors\Dgm\SimpleProperties;
 
 
 class SimpleProperties

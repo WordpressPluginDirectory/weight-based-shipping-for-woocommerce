@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math\Exception;
+namespace WbsngVendors\Brick\Math\Exception;
 
-use GzpWbsNgVendors\Brick\Math\BigInteger;
+use WbsngVendors\Brick\Math\BigInteger;
 
 /**
  * Exception thrown when an integer overflow occurs.

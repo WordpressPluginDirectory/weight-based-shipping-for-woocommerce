@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Aggregators;
+namespace WbsngVendors\Dgm\Shengine\Aggregators;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAggregator;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Rate;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAggregator;
+use WbsngVendors\Dgm\Shengine\Model\Rate;
 
 
 class AverageAggregator extends ClassNameAware implements IAggregator

@@ -1,10 +1,10 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model;
+namespace WbsngVendors\Dgm\Shengine\Model;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICalculator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IMatcher;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRule;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRuleMeta;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICalculator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IMatcher;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRule;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRuleMeta;
 
 
 class Rule implements IRule

@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Grouping;
+namespace WbsngVendors\Dgm\Shengine\Grouping;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
 
 
 class ByItemGrouping implements IGrouping

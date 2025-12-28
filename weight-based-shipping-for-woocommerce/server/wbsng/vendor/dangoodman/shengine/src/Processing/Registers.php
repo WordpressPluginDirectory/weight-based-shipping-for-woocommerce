@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Processing;
+namespace WbsngVendors\Dgm\Shengine\Processing;
 
 
 class Registers

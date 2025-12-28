@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math;
+namespace WbsngVendors\Brick\Math;
 
-use GzpWbsNgVendors\Brick\Math\Exception\DivisionByZeroException;
+use WbsngVendors\Brick\Math\Exception\DivisionByZeroException;
 use Brick\Math\Exception\MathException;
-use GzpWbsNgVendors\Brick\Math\Exception\NegativeNumberException;
-use GzpWbsNgVendors\Brick\Math\Internal\Calculator;
+use WbsngVendors\Brick\Math\Exception\NegativeNumberException;
+use WbsngVendors\Brick\Math\Internal\Calculator;
 
 /**
  * Immutable, arbitrary-precision signed decimal numbers.

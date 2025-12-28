@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common;
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\ICondition;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\ICondition;
 
 
 abstract class AbstractCondition extends ClassNameAware implements ICondition

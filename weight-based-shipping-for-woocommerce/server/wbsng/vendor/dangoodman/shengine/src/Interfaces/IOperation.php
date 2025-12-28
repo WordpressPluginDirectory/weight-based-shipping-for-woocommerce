@@ -1,7 +1,7 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Interfaces;
+namespace WbsngVendors\Dgm\Shengine\Interfaces;
 
-use GzpWbsNgVendors\Dgm\Shengine\Processing\Registers;
+use WbsngVendors\Dgm\Shengine\Processing\Registers;
 
 
 interface IOperation

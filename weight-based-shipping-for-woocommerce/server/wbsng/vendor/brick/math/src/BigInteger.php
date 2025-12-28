@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math;
+namespace WbsngVendors\Brick\Math;
 
-use GzpWbsNgVendors\Brick\Math\Exception\DivisionByZeroException;
-use GzpWbsNgVendors\Brick\Math\Exception\IntegerOverflowException;
-use GzpWbsNgVendors\Brick\Math\Exception\MathException;
-use GzpWbsNgVendors\Brick\Math\Exception\NegativeNumberException;
-use GzpWbsNgVendors\Brick\Math\Exception\NumberFormatException;
-use GzpWbsNgVendors\Brick\Math\Internal\Calculator;
+use WbsngVendors\Brick\Math\Exception\DivisionByZeroException;
+use WbsngVendors\Brick\Math\Exception\IntegerOverflowException;
+use WbsngVendors\Brick\Math\Exception\MathException;
+use WbsngVendors\Brick\Math\Exception\NegativeNumberException;
+use WbsngVendors\Brick\Math\Exception\NumberFormatException;
+use WbsngVendors\Brick\Math\Internal\Calculator;
 
 /**
  * An arbitrary-size integer.

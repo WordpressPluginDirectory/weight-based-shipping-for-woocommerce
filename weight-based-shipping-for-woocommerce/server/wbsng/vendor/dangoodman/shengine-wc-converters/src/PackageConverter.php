@@ -1,19 +1,19 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Converters;
+namespace WbsngVendors\Dgm\Shengine\Woocommerce\Converters;
 
-use GzpWbsNgVendors\Deferred\Deferred;
-use GzpWbsNgVendors\Dgm\Shengine\Attributes\ProductVariationAttribute;
-use GzpWbsNgVendors\Dgm\Shengine\Grouping\AttributeGrouping;
+use WbsngVendors\Deferred\Deferred;
+use WbsngVendors\Dgm\Shengine\Attributes\ProductVariationAttribute;
+use WbsngVendors\Dgm\Shengine\Grouping\AttributeGrouping;
 use Dgm\Shengine\Interfaces\IItem;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Address;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Customer;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Destination;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Dimensions;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Package;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Price;
-use GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Model\Item\WoocommerceItem;
-use GzpWbsNgVendors\Dgm\Shengine\Woocommerce\Model\Item\WpmlAwareItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IPackage;
+use WbsngVendors\Dgm\Shengine\Model\Address;
+use WbsngVendors\Dgm\Shengine\Model\Customer;
+use WbsngVendors\Dgm\Shengine\Model\Destination;
+use WbsngVendors\Dgm\Shengine\Model\Dimensions;
+use WbsngVendors\Dgm\Shengine\Model\Package;
+use WbsngVendors\Dgm\Shengine\Model\Price;
+use WbsngVendors\Dgm\Shengine\Woocommerce\Model\Item\WoocommerceItem;
+use WbsngVendors\Dgm\Shengine\Woocommerce\Model\Item\WpmlAwareItem;
 use InvalidArgumentException;
 use SebastianBergmann\ObjectReflector\TestFixture\ChildClass;
 use WC_Cart;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math\Exception;
+namespace WbsngVendors\Brick\Math\Exception;
 
 /**
  * Exception thrown when attempting to perform an unsupported operation, such as a square root, on a negative number.

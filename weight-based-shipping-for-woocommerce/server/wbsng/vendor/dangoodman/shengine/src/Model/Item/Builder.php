@@ -1,9 +1,9 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Model\Item;
+namespace WbsngVendors\Dgm\Shengine\Model\Item;
 
-use GzpWbsNgVendors\Dgm\Shengine\Model\Dimensions;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Item;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Price;
+use WbsngVendors\Dgm\Shengine\Model\Dimensions;
+use WbsngVendors\Dgm\Shengine\Model\Item;
+use WbsngVendors\Dgm\Shengine\Model\Price;
 
 
 

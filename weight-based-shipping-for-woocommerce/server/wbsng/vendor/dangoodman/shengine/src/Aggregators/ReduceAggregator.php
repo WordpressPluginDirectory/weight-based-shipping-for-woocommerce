@@ -1,12 +1,12 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Aggregators;
+namespace WbsngVendors\Dgm\Shengine\Aggregators;
 
 
-use GzpWbsNgVendors\Dgm\ClassNameAware\ClassNameAware;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAggregator;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRate;
+use WbsngVendors\Dgm\ClassNameAware\ClassNameAware;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAggregator;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRate;
 use Dgm\Shengine\Model\Rate;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\RateRegister;
+use WbsngVendors\Dgm\Shengine\Processing\RateRegister;
 
 
 abstract class ReduceAggregator extends ClassNameAware implements IAggregator

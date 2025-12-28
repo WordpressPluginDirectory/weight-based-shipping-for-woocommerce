@@ -1,11 +1,11 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Grouping;
+namespace WbsngVendors\Dgm\Shengine\Grouping;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IAttribute;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IGrouping;
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IItem;
+use WbsngVendors\Dgm\Shengine\Interfaces\IAttribute;
+use WbsngVendors\Dgm\Shengine\Interfaces\IGrouping;
+use WbsngVendors\Dgm\Shengine\Interfaces\IItem;
 use Dgm\Shengine\Interfaces\IPackage;
-use GzpWbsNgVendors\Dgm\Shengine\Model\Package;
+use WbsngVendors\Dgm\Shengine\Model\Package;
 
 
 class AttributeGrouping implements IGrouping

@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Conditions\Common\Enum;
+namespace WbsngVendors\Dgm\Shengine\Conditions\Common\Enum;
 
 
 class EqualEnumCondition extends AbstractEnumCondition

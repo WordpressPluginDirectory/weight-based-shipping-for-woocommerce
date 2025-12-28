@@ -1,8 +1,8 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Aggregators;
+namespace WbsngVendors\Dgm\Shengine\Aggregators;
 
-use GzpWbsNgVendors\Dgm\Shengine\Interfaces\IRate;
-use GzpWbsNgVendors\Dgm\Shengine\Processing\RateRegister;
+use WbsngVendors\Dgm\Shengine\Interfaces\IRate;
+use WbsngVendors\Dgm\Shengine\Processing\RateRegister;
 
 
 class SumAggregator extends ReduceAggregator

@@ -1,5 +1,5 @@
 <?php
-namespace GzpWbsNgVendors\Dgm\Shengine\Interfaces;
+namespace WbsngVendors\Dgm\Shengine\Interfaces;
 
 
 interface IMatcher

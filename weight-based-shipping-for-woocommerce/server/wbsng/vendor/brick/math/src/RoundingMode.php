@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GzpWbsNgVendors\Brick\Math;
+namespace WbsngVendors\Brick\Math;
 
 /**
  * Specifies a rounding behavior for numerical operations capable of discarding precision.
