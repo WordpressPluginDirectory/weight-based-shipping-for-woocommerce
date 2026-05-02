@@ -5,7 +5,7 @@ Requires PHP: 7.3
 Requires at least: 5.8
 Tested up to: 6.9
 WC requires at least: 7.0
-WC tested up to: 10.4
+WC tested up to: 10.7
 
 
 Weight Based Shipping is a flexible and widely-used solution to calculate shipping costs based on the total cart weight and value.
@@ -38,6 +38,23 @@ Like the plugin? Leave a [review](https://wordpress.org/support/plugin/weight-ba
 
 
 == Changelog ==
+
+= 6.15.3 =
+* Hide woocommerce ads on the settings page.
+
+= 6.15.2 =
+* Tested with WooCommerce 10.7.
+
+= 6.15.1 =
+* Tested with WooCommerce 10.6.
+
+= 6.15.0 =
+* Fix deprecation warnings from PHP 8.3, 8.4.
+* PRO: Support Require mod. All required rules must be matched for a shipping method to be activated.
+
+= 6.14.0 =
+* More flexible configuration loading for better compatibility with third-party code.
+* Tested with WooCommerce 10.5.
 
 = 6.13.0 =
 * Improve the appearance of the Save, Undo, Redo buttons.
@@ -207,7 +224,7 @@ Like the plugin? Leave a [review](https://wordpress.org/support/plugin/weight-ba
 * Tested with WooCommerce 7.4.
 
 = 5.4.0 =
-* Use the cart price provided by WooCommerce by default for fresh installations of the plugin. It makes Order Subtotal accounting for virtual items' prices and increases compatibility with third-party plugins.
+* Use the cart price provided by WooCommerce by default for fresh installations of the plugin. It makes Order Subtotal to account for virtual items' prices and increases compatibility with third-party plugins.
 * Make sure a user has manage_woocommerce capability to update the shipping rules.
 * Tested with PHP 8.2.
 

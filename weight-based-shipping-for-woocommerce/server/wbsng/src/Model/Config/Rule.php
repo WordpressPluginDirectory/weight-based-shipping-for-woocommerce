@@ -27,9 +27,56 @@ class Rule
     use RuleMapping;
 
 
+    /**
+     * @return ?Result null means deny
+     */
     public function rate(Bundle $items, ?Destination $dest, PriceSettings $priceSettings): ?Result
     {
-        $empty = Result::empty($items);
+        $matched = $this->match($items, $dest, $priceSettings);
+        if ($matched->empty()) {
+            // RequireAction is the only action that takes place on non-matching rules.
+            // All other actions are supposed to modify matching rules.
+            if ($this->action instanceof RequireAction) {
+                return null;
+            }
+            return Result::empty($items);
+        }
+
+        $action = $this->action;
+        switch (true) {
+            case $action instanceof RequireAction: // no-op for matching rules
+            case $action instanceof PassAction:
+                return new Result(
+                    $this->charge->calc($matched),
+                    $matched,
+                    Bundle::$EMPTY
+                );
+            case $action instanceof StopAction:
+                return new Result(
+                    $this->charge->calc($matched),
+                    $matched,
+                    $items,
+                );
+            case $action instanceof DropAction:
+                $drop = $matched; // optimization
+                if ($action->drop !== $this->shclasses) {
+                    $drop = $action->drop->match($items);
+                }
+                return new Result(
+                    $this->charge->calc($matched),
+                    $matched,
+                    $drop,
+                );
+            case $action instanceof DenyAction:
+                return null;
+            default:
+                throw new \LogicException("Unknown action type: " . get_class($action));
+        }
+    }
+
+    private function match(Bundle $items, ?Destination $dest, PriceSettings $priceSettings): Bundle
+    {
+        $empty = Bundle::$EMPTY;
 
         if (!$this->locations->match($dest)) {
             return $empty;
@@ -49,20 +96,7 @@ class Rule
             return $empty;
         }
 
-        if (!$this->action) {
-            return null;
-        }
-
-        $drop = $matched; // optimization
-        if ($this->action->drop !== $this->shclasses) {
-            $drop = $this->action->drop->match($items);
-        }
-
-        return new Result(
-            $this->charge->calc($matched),
-            $matched,
-            $drop
-        );
+        return $matched;
     }
 }
 
@@ -98,22 +132,34 @@ class Result
 }
 
 
-class Action
-{
-    /**
-     * @var ShclassCond
-     */
-    public $drop;
+abstract class Action {
+}
 
-    public function __construct(?ShclassCond $drop = null)
-    {
-        $this->drop = $drop ?? ShclassCond::$NONE;
+class PassAction extends Action {
+}
+
+class StopAction extends Action {
+}
+
+class DropAction extends Action {
+    public $drop;
+    public function __construct(ShclassCond $drop) {
+        $this->drop = $drop;
     }
+}
+
+class DenyAction extends Action {
+}
+
+class RequireAction extends Action {
 }
 
 
 trait RuleMapping
 {
+    /**
+     * @return static|null
+     */
     public static function unserialize(array $data): ?self
     {
         $data = Context::of($data);
@@ -123,7 +169,7 @@ trait RuleMapping
             return null;
         }
 
-        $rule = new self();
+        $rule = new static();
         $rule->ctx = $data;
         return $rule;
     }
@@ -156,13 +202,13 @@ trait RuleMapping
         switch ($prop) {
 
             case 'name':
-                return $this->ctx['name']->map([T::class, 'optionalString'], '');
+                return $this->ctx[$prop]->map([T::class, 'optionalString'], '');
 
             case 'locations':
-                return $this->ctx['locations']->map([DestCond::class, 'unserialize']);
+                return $this->ctx[$prop]->map([DestCond::class, 'unserialize']);
 
             case 'shclasses':
-                return $this->ctx['shclasses']->map([ShclassCond::class, 'unserialize']);
+                return $this->ctx[$prop]->map([ShclassCond::class, 'unserialize']);
 
             case 'weight':
                 return $this->ctx[$prop]->map(function($v) {
@@ -176,10 +222,10 @@ trait RuleMapping
                 });
 
             case 'charge':
-                return $this->ctx['charge']->map([Charge::class, 'unserialize']);
+                return $this->ctx[$prop]->map([Charge::class, 'unserialize']);
 
             case 'action':
-                return $this->ctx['action']->map(function($x) {
+                return $this->ctx[$prop]->map(function($x) {
                     return $this->mapAction($x);
                 });
 
@@ -191,7 +237,7 @@ trait RuleMapping
     private function mapAction(?array $action): ?Action
     {
         if ($action === null) {
-            return new Action(ShclassCond::$NONE);
+            return new PassAction();
         }
 
         $action = Context::of($action);
@@ -205,13 +251,16 @@ trait RuleMapping
                             ? $this->shclasses
                             : Context::of($x)->map([ShclassCond::class, 'unserialize']);
                     });
-                    return new Action($shclasses);
+                    return new DropAction($shclasses);
 
                 case 'finish':
-                    return new Action(ShclassCond::$ANY);
+                    return new StopAction();
 
                 case 'cancel':
-                    return null;
+                    return new DenyAction();
+
+                case 'require':
+                    return new RequireAction();
 
                 default:
                     throw new Invalid('unsupported action type');

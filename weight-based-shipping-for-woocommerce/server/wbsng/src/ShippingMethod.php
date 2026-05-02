@@ -70,7 +70,18 @@ class ShippingMethod extends WC_Shipping_Method
 
     public function configData(): ?array
     {
-        return get_option($this->optionName, null);
+        $data = get_option($this->optionName);
+        if (!$data) {
+            return null;
+        }
+        if (!is_array($data)) {
+            wc_get_logger()->error("WBS shipping method config corrupted", [
+                'instance_id' => $this->instance_id,
+                'option' => $this->optionName,
+                'data' => $data,
+            ]);
+        }
+        return $data;
     }
 
     /**

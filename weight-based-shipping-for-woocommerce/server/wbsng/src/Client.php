@@ -164,7 +164,7 @@ function hide(bool $globalInstance): void {
     ?>
         <style>
             <?= $hide ?> {display:none}
-            .woocommerce-recommended-shipping-extensions {display: none !important}
+            .woocommerce-recommended-shipping-extensions, .wc-settings-marketplace-link {display: none !important}
         </style>
     <?php
 }
